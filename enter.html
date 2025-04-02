@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not to forget</title>
+    <style>
+        .gor {
+    display: flex; /* расположениу элементов по горизонтали */
+    align-items: center; /* элементы по вертикали */ 
+    }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet"></head>
+    <link rel="stylesheet" href="style_enter.css"> 
+</head>
+<body>
+        <div class="main">  	
+            <input type="checkbox" id="chk">
+    
+                <div class="login">
+                    <form class="form">
+                        <label for="chk" aria-hidden="true">Вход</label>
+                        <input class="input" type="email" name="email" placeholder="Email" required="">
+                        <input class="input" type="password" name="pswd" placeholder="Password" required="">
+                        <button>Войти</button>
+                    </form>
+                </div>
+    
+          <div class="register">
+                    <form class="form">
+                        <label for="chk" aria-hidden="true">Регистрация</label>
+                        <input class="input" type="text" name="txt" placeholder="Username" required="">
+                        <input class="input" type="email" name="email" placeholder="Email" required="">
+                        <input class="input" type="password" name="pswd" placeholder="Password" required="">
+                        <button>Зарегистрироваться</button>
+                    </form>
+                </div>
+        </div>
+</body></html>
