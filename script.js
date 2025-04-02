@@ -1,18 +1,48 @@
 let name = "гость";
 let sign = false;
+let registered = {};
 
-document.getElementById("name").textContent = name;
+username = document.getElementById("name");
+username.textContent = name;
 const div = document.querySelector(".list");
 const div_habits = document.querySelector(".list_habits");
  
 
 function logout() {
-    if (sign){
-        alert("Вы вышли из системы.");
-        name = "гость";
+    window.location.href = "enter.html";
+}
+
+function Sign_in(event){
+    event.preventDefault(); // Предотвращаем отправку формы и обновление страницы
+
+    const login = document.getElementById("email");
+    const password = document.getElementById("password");
+    if (login.value in registered && password.value == registered[login.value][0]){
+        sign = true;
+        window.location.href = "main.html";
     } else {
-        window.location.href = "enter.html";
+        alert("Неверный логин или пароль");
+    };
+    login.value = "";
+    password.value = "";
+}
+
+function Sign_up(event) {
+    event.preventDefault(); // Предотвращаем отправку формы и обновление страницы
+
+    const username = document.getElementById("username_reg");
+    const login = document.getElementById("email_reg");
+    const password = document.getElementById("password_reg");
+
+    if (login.value in registered) {
+        alert("Пользователь уже зарегистрирован");
+    } else {
+        registered[login.value] = [password.value, username.value];
+        alert("Успешная регистрация");
     }
+    username.value = "";
+    login.value = "";
+    password.value = "";
 }
 
 function go() {

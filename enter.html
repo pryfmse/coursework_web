@@ -14,28 +14,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet"></head>
     <link rel="stylesheet" href="style_enter.css"> 
+    <script defer src="script.js"></script>
 </head>
 <body>
         <div class="main">  	
             <input type="checkbox" id="chk">
-    
                 <div class="login">
                     <form class="form">
                         <label for="chk" aria-hidden="true">Вход</label>
-                        <input class="input" type="email" name="email" placeholder="Email" required="">
-                        <input class="input" type="password" name="pswd" placeholder="Password" required="">
-                        <button>Войти</button>
+                        <input id="email" class="input" type="email" name="email" placeholder="Email" required="">
+                        <input id="password" class="input" type="password" name="pswd" placeholder="Password" required="">
+                        <button type="submit" onclick="Sign_in(event)">Войти</button>
                     </form>
                 </div>
     
-          <div class="register">
-                    <form class="form">
-                        <label for="chk" aria-hidden="true">Регистрация</label>
-                        <input class="input" type="text" name="txt" placeholder="Username" required="">
-                        <input class="input" type="email" name="email" placeholder="Email" required="">
-                        <input class="input" type="password" name="pswd" placeholder="Password" required="">
-                        <button>Зарегистрироваться</button>
-                    </form>
-                </div>
+            <div class="register">
+                <form class="form">
+                    <label for="chk" aria-hidden="true">Регистрация</label>
+                    <input id="username_reg" class="input" type="text" name="txt" placeholder="Username" required="">
+                    <input id="email_reg" class="input" type="email" name="email" placeholder="Email" required="">
+                    <input id="password_reg" class="input" type="password" name="pswd" placeholder="Password" required="">
+                    <button type="submit" onclick="Sign_up(event)">Зарегистрироваться</button>
+                </form>
+            </div>
         </div>
 </body></html>
