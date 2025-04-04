@@ -1,58 +1,67 @@
+/* Стили шапки */
 header {
-    padding: 20px;
-    font-size: 25px;
-    font-family: "Pacifico", cursive;
-    display: flex; /* расположениу элементов по горизонтали */
-    justify-content: space-around; /* пространство между элементами */
+    padding: 20px;                 /* Внутренние отступы */
+    font-size: 25px;               /* Размер шрифта */
+    font-family: "Pacifico", cursive; /* Шрифт заголовка */
+    display: flex;                 /* Горизонтальное расположение элементов */
+    justify-content: space-around; /* Равномерное распределение пространства */
 }
 
+/* Основные стили страницы */
 body {
-    font-size: 25px;
-    background-color: #82a8c4;
-    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 25px;               /* Базовый размер текста */
+    background-color: #82a8c4;     /* Цвет фона страницы */
+    font-family: "Yanone Kaffeesatz", sans-serif; /* Основной шрифт */
 }
 
+/* Навигационное меню */
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    list-style: none;             /* Убираем маркеры списка */
+    display: flex;                /* Горизонтальное расположение пунктов */
+    justify-content: center;      /* Центрирование элементов */
+    gap: 20px;                   /* Расстояние между пунктами меню */
 }
 
+/* Стили секций контента */
 section {
-    background: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
+    background: #fff;             /* Белый фон секций */
+    margin: 20px 0;               /* Внешние отступы сверху/снизу */
+    padding: 20px;                /* Внутренние отступы */
+    border-radius: 5px;           /* Скругление углов */
 }
 
+/* Общие стили кнопок */
 button {
-    font-family: "Yanone Kaffeesatz", sans-serif;
-    background-color: #2c3e50;
-    color: #ffffff;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    font-family: "Yanone Kaffeesatz", sans-serif; /* Шрифт кнопок */
+    background-color: #2c3e50;    /* Цвет фона */
+    color: #ffffff;               /* Цвет текста */
+    padding: 10px;                /* Внутренние отступы */
+    font-size: 20px;              /* Размер текста */
+    border-radius: 5px;           /* Скругление углов */
+    cursor: pointer;              /* Изменение курсора при наведении */
 }
 
+/* Стилизация таблиц */
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 100%;                  /* Полная ширина контейнера */
+    border-collapse: collapse;    /* Объединение границ ячеек */
 }
 
+/* Стили ячеек таблицы */
 th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
+    padding: 12px;                /* Внутренние отступы */
+    border: 1px solid #ddd;       /* Границы ячеек */
 }
 
+/* Стили заголовков таблицы */
 th {
-    background: #82a8c4;
-    color: white;
-    font-size: 20px;
+    background: #82a8c4;          /* Цвет фона заголовков */
+    color: white;                 /* Цвет текста */
+    font-size: 20px;              /* Размер шрифта */
 }
 
+/* Стили подвала */
 footer {
-    text-align: center;
-    padding: 10px;
+    text-align: center;           /* Центрирование текста */
+    padding: 10px;                /* Внутренние отступы */
 }

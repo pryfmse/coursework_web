@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not to forget</title>
+    
+    <!-- Стили для горизонтального выравнивания -->
+    <style>
+        .gor {
+            display: flex; /* расположение элементов по горизонтали */
+            align-items: center; /* элементы по вертикали */ 
+        }
+    </style>
+    
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+    
+    <!-- Внешние стили и скрипты -->
+    <link rel="stylesheet" href="style_index.css"> 
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <h1><span id="greeting"></span>, <span id="name"></span></h1>
+        <button class="button-header" onclick="logout()" id="myButton">профиль</button>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <table>
+            <!-- Первая строка: Задачи и Календарь -->
+            <tr>
+                <!-- Блок задач -->
+                <td>
+                    <section>
+                        <div class="gor" style="margin-bottom: -25px;">
+                            <h2>Задачи</h2>
+                            <button class="button-add" onclick="add_task()">+</button>
+                        </div>
+                        <div class="list"></div>
+                    </section>
+                </td>
+                
+                <!-- Блок календаря -->
+                <td>
+                    <div class="calendar">
+                        <div class="month" id="month"></div>
+                        <div class="days" id="days">
+                            <div class="day day-name">Пн</div>
+                            <div class="day day-name">Вт</div>
+                            <div class="day day-name">Ср</div>
+                            <div class="day day-name">Чт</div>
+                            <div class="day day-name">Пт</div>
+                            <div class="day day-name">Сб</div>
+                            <div class="day day-name">Вс</div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Вторая строка: Привычки и Информация -->
+            <tr>
+                <!-- Блок привычек -->
+                <td>
+                    <section>
+                        <div class="gor" style="margin-bottom: -25px;">
+                            <h2>Привычки</h2>
+                            <button class="button-add" onclick="add_habit()">+</button>
+                        </div>
+                        <div class="list_habits"></div>
+                    </section>
+                </td>
+                
+                <!-- Блок сегодняшней даты и кнопки -->
+                <td>
+                    <table>
+                        <tr> 
+                            <!-- Текущий день -->
+                            <td>Сегодня: <span id="day"></span></td>
+                        </tr>
+                        <tr>
+                            <!-- Кнопка информации -->
+                            <td colspan="2">
+                                <button onclick="go()" style="padding: 10px; font-size: 20px;">О планировании</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2025 Мой веб-сайт. Все права защищены.</p>
+    </footer>
+</body>
+</html>
